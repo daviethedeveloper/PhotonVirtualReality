@@ -663,7 +663,7 @@ MonoBehaviour:
   XRHead: {fileID: 1977727262}
   XRHand_Left: {fileID: 1514879644}
   XRHand_Right: {fileID: 1145862339}
-  headPositionOffset: {x: 0, y: 0, z: 0}
+  headPositionOffset: {x: 0, y: -0.9, z: 0}
   handRotationOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1116779860
 MonoBehaviour:
