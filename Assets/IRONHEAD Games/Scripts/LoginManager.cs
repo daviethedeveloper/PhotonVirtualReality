@@ -11,11 +11,19 @@ public class LoginManager : MonoBehaviourPunCallbacks
     
     void Start()
     {
-        PhotonNetwork.ConnectUsingSettings();
-        
     }
     
     
+    #endregion
+
+
+    #region UI Callback Methods
+
+    public void ConnectAnonymously()
+    {
+        PhotonNetwork.ConnectUsingSettings();
+    }
+
     #endregion
 
     #region Photon Callback Methods
