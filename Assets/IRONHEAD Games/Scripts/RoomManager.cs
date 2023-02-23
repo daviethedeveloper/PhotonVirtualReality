@@ -5,16 +5,32 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.Networking;
+using UnityEngine.UIElements;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class RoomManager : MonoBehaviourPunCallbacks
 {
+    private string mapType;
 
     #region UI Callback Methods
 
     public void JoinRandomRoom()
     {
         PhotonNetwork.JoinRandomRoom();
+    }
+    
+    public void OnEnteredButtonClicked_Outdoor()
+    {
+        mapType = MultiPlayerVRConstants.MAP_TYPE_VALUE_OUTDOOR;
+        ExitGames.Client.Photon.Hashtable expectedCustomProperties = new ExitGames.Client.Photon.Hashtable() { {MultiPlayerVRConstants.MAP_TYPE_KEY, mapType }};
+        PhotonNetwork.JoinRandomRoom(expectedCustomProperties, 0);
+    }
+
+    public void OnEnteredButtonClicked_School()
+    {
+        mapType = MultiPlayerVRConstants.MAP_TYPE_VALUE_SCHOOL;
+        ExitGames.Client.Photon.Hashtable expectedCustomProperties = new ExitGames.Client.Photon.Hashtable() { {MultiPlayerVRConstants.MAP_TYPE_KEY, mapType }};
+        PhotonNetwork.JoinRandomRoom(expectedCustomProperties, 0);
     }
 
     #endregion
@@ -68,7 +84,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
          * 2. The outdoor map  = "outdoor"
          */
 
-        ExitGames.Client.Photon.Hashtable customRoomProperties = new ExitGames.Client.Photon.Hashtable() { {MultiPlayerVRConstants.MAP_TYPE_KEY, "school"}};
+        ExitGames.Client.Photon.Hashtable customRoomProperties = new ExitGames.Client.Photon.Hashtable() { {MultiPlayerVRConstants.MAP_TYPE_KEY, mapType}};
         
         roomOptions.CustomRoomPropertiesForLobby = roomPropsInLobby;
         roomOptions.CustomRoomProperties = customRoomProperties;
