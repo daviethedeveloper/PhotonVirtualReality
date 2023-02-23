@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using ExitGames.Client.Photon;
@@ -7,10 +8,16 @@ using Photon.Realtime;
 using UnityEngine.Networking;
 using UnityEngine.UIElements;
 using UnityEngine.XR.Interaction.Toolkit;
+using Random = UnityEngine.Random;
 
 public class RoomManager : MonoBehaviourPunCallbacks
 {
     private string mapType;
+
+    private void Start()
+    {
+        PhotonNetwork.AutomaticallySyncScene = true;
+    }
 
     #region UI Callback Methods
 
