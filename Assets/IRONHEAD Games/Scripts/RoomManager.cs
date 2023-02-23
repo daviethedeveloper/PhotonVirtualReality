@@ -65,6 +65,17 @@ public class RoomManager : MonoBehaviourPunCallbacks
             if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(MultiPlayerVRConstants.MAP_TYPE_KEY,out myMap))
             {
                 Debug.Log("Joined the room with map: " + (string)myMap);
+
+                if ((string)mapType == MultiPlayerVRConstants.MAP_TYPE_VALUE_SCHOOL)
+                {
+                    // Load the School Scene
+                    PhotonNetwork.LoadLevel("World_School");
+                    
+                }else if ((string)mapType == MultiPlayerVRConstants.MAP_TYPE_VALUE_OUTDOOR)
+                {
+                    // Load the Outdoor Scene
+                    PhotonNetwork.LoadLevel("World_Outdoor");
+                }
             }
         }
     }
