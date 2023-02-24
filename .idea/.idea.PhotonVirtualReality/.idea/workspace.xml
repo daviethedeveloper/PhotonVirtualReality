@@ -17,6 +17,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/IRONHEAD Games/Scripts/LoginUIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/IRONHEAD Games/Scripts/MultiPlayerVRConstants.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/IRONHEAD Games/Scripts/RoomManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/IRONHEAD Games/Scripts/SpawnManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/IRONHEAD Games/Scripts/VirtualManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.2.0/Runtime/Interaction/Interactors/XRDirectInteractor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -87,7 +88,7 @@
       <workItem from="1676994923054" duration="794000" />
       <workItem from="1677028417614" duration="7787000" />
       <workItem from="1677127279113" duration="3005000" />
-      <workItem from="1677269874428" duration="1013000" />
+      <workItem from="1677269874428" duration="2887000" />
     </task>
     <servers />
   </component>
