@@ -9,14 +9,26 @@ using UnityEngine.Networking;
 using UnityEngine.UIElements;
 using UnityEngine.XR.Interaction.Toolkit;
 using Random = UnityEngine.Random;
+using TMPro;
 
 public class RoomManager : MonoBehaviourPunCallbacks
 {
     private string mapType;
 
+    public TextMeshProUGUI OccupanyRateText_ForSchool;
+    public TextMeshProUGUI OccupanyRateText_ForOutdoor;
+    
+
     private void Start()
     {
         PhotonNetwork.AutomaticallySyncScene = true;
+        
+        // Check if connected to servers or not
+        if (PhotonNetwork.IsConnectedAndReady)
+        {
+            // join default lobby
+            PhotonNetwork.JoinLobby();
+        }
     }
 
     #region UI Callback Methods
@@ -85,13 +97,41 @@ public class RoomManager : MonoBehaviourPunCallbacks
         Debug.Log(newPlayer.NickName +" joined to " +  "Player Count: " + PhotonNetwork.CurrentRoom.PlayerCount);
     }
 
+    public override void OnRoomListUpdate(List<RoomInfo> roomList)
+    {
+        if (roomList.Count == 0)
+        {
+            // There is no room at all 
+            OccupanyRateText_ForOutdoor.text = 0 + "/" + 20;
+            OccupanyRateText_ForSchool.text = 0 + "/" + 20;
+        }
+
+        foreach (RoomInfo room in roomList)
+        {
+            if (room.Name.Contains(MultiPlayerVRConstants.MAP_TYPE_VALUE_SCHOOL))
+            {
+                // if contains the school string in the name
+                // then this is the school - Update school room occupancy field
+                OccupanyRateText_ForSchool.text = room.PlayerCount + " / " + 20;
+            }else if (room.Name.Contains(MultiPlayerVRConstants.MAP_TYPE_VALUE_OUTDOOR))
+            {
+                OccupanyRateText_ForOutdoor.text = room.PlayerCount + " / " + 20;
+            }
+        }
+    }
+
+    public override void OnJoinedLobby()
+    {
+        Debug.Log("Joined default lobby");
+    }
+
     #endregion
 
     #region Private Methods
 
     private void CreateAndJoinRoom()
     {
-        string randomRoomName = "Room_" + Random.Range(0, 10000);
+        string randomRoomName = "Room_" + mapType + Random.Range(0, 10000);
         RoomOptions roomOptions = new RoomOptions();
         roomOptions.MaxPlayers = 20;
 
