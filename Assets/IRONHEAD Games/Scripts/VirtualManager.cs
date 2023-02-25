@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,18 @@ using Photon.Realtime;
 
 public class VirtualManager : MonoBehaviourPunCallbacks
 {
+    public static VirtualManager Instance;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+
+        Instance = this;
+    }
 
     public void LeaveRoomAndLoadHomeScene()
     {
