@@ -6,12 +6,28 @@ using Photon.Realtime;
 
 public class VirtualManager : MonoBehaviourPunCallbacks
 {
+
+    public void LeaveRoomAndLoadHomeScene()
+    {
+        PhotonNetwork.LeaveRoom();
+    }
     #region Photon Callback Methods
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         Debug.Log(newPlayer.NickName +" joined to " +  "Player Count: " + PhotonNetwork.CurrentRoom.PlayerCount);
     }
-    
+
+
+    public override void OnLeftRoom()
+    {
+        PhotonNetwork.Disconnect();
+    }
+
+    public override void OnDisconnected(DisconnectCause cause)
+    {
+        PhotonNetwork.LoadLevel("HomeScene");
+    }
+
     #endregion
 }
