@@ -5,7 +5,10 @@ using Photon.Pun;
 using Photon.Realtime;
 public class SpawnManager : MonoBehaviourPunCallbacks
 {
-    [SerializeField] 
+    [SerializeField] private GameObject GenericVRPlayerPrefab;
+
+    public Vector3 spawnPosition;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +16,7 @@ public class SpawnManager : MonoBehaviourPunCallbacks
         if (PhotonNetwork.IsConnectedAndReady)
         {
             // instantiate player across the network
-            //PhotonNetwork.Instantiate();
+            PhotonNetwork.Instantiate(GenericVRPlayerPrefab.name,spawnPosition,Quaternion.identity );
         }
     }
 
