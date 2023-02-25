@@ -16,6 +16,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/IRONHEAD Games/Scripts/Editor/RoomManagerEditorScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/IRONHEAD Games/Scripts/LoginUIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/IRONHEAD Games/Scripts/MultiPlayerVRConstants.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/IRONHEAD Games/Scripts/PlayerNetworkSetup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/IRONHEAD Games/Scripts/RoomManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/IRONHEAD Games/Scripts/SpawnManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/IRONHEAD Games/Scripts/VirtualManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -89,7 +90,7 @@
       <workItem from="1677028417614" duration="7787000" />
       <workItem from="1677127279113" duration="3005000" />
       <workItem from="1677269874428" duration="2887000" />
-      <workItem from="1677302153767" duration="268000" />
+      <workItem from="1677302153767" duration="1423000" />
     </task>
     <servers />
   </component>
