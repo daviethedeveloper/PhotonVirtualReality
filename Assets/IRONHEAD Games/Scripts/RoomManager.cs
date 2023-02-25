@@ -24,9 +24,13 @@ public class RoomManager : MonoBehaviourPunCallbacks
         PhotonNetwork.AutomaticallySyncScene = true;
         
         // Check if connected to servers or not
-        if (PhotonNetwork.IsConnectedAndReady)
+        if (!PhotonNetwork.IsConnectedAndReady)
         {
             // join default lobby
+            PhotonNetwork.ConnectUsingSettings();
+        }
+        else
+        {
             PhotonNetwork.JoinLobby();
         }
     }
@@ -55,6 +59,12 @@ public class RoomManager : MonoBehaviourPunCallbacks
     #endregion
 
     #region Photon Callback Methods
+
+    public override void OnConnectedToMaster()
+    {
+        Debug.Log("Connect to servers again! ");
+        PhotonNetwork.JoinLobby();
+    }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
     {
