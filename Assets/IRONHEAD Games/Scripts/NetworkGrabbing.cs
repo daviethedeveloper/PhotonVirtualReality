@@ -64,4 +64,16 @@ public class NetworkGrabbing : MonoBehaviourPunCallbacks, IPunOwnershipCallbacks
 
     #endregion
 
+    [PunRPC]
+    public void StartNetworkGrabbing()
+    {
+        
+    }
+
+    [PunRPC]
+    public void StopNetworkGrabbing()
+    {
+        
+    }
+
 }
