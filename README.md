@@ -16,71 +16,35 @@ Integrating Photon in my Virtual Reality game for mulitplayer
     <a href="https://reponame/issues/new?template=feature.md&labels=feature">Request feature</a>
   </p>
 </p>
+# Overview
 
+{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
 
-## Table of contents
+{Provide a description of the software that you wrote.}
 
-- [Quick start](#quick-start)
-- [Status](#status)
-- [What's included](#whats-included)
-- [Bugs and feature requests](#bugs-and-feature-requests)
-- [Contributing](#contributing)
-- [Creators](#creators)
-- [Thanks](#thanks)
-- [Copyright and license](#copyright-and-license)
+{Describe your purpose for writing this software.}
 
+{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code.}
 
-## Quick start
+[Software Demo Video](http://youtube.link.goes.here)
 
-Some text
+# Development Environment
 
-- Instruction 1
-- Instruction 2
-- Instruction 3
+{Describe the tools that you used to develop the software}
 
-## Status
+{Describe the programming language that you used and any libraries.}
 
-Here goes all the budgets
+# Useful Websites
 
-## What's included
+{Make a list of websites that you found helpful in this project}
 
-Some text
+- [Web Site Name](http://url.link.goes.here)
+- [Web Site Name](http://url.link.goes.here)
 
-```text
-folder1/
-└── folder2/
-    ├── folder3/
-    │   ├── file1
-    │   └── file2
-    └── folder4/
-        ├── file3
-        └── file4
-```
+# Future Work
 
-## Bugs and feature requests
+{Make a list of things that you need to fix, improve, and add in the future.}
 
-Have a bug or a feature request? Please first read the [issue guidelines](https://reponame/blob/master/CONTRIBUTING.md) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://reponame/issues/new).
-
-## Contributing
-
-Please read through our [contributing guidelines](https://reponame/blob/master/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
-
-Moreover, all HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Main author](https://github.com/usernamemainauthor).
-
-Editor preferences are available in the [editor config](https://reponame/blob/master/.editorconfig) for easy use in common text editors. Read more and download plugins at <https://editorconfig.org/>.
-
-## Creators
-
-**Creator 1**
-
-- <https://github.com/usernamecreator1>
-
-## Thanks
-
-Some Text
-
-## Copyright and license
-
-Code and documentation copyright 2011-2018 the authors. Code released under the [MIT License](https://reponame/blob/master/LICENSE).
-
-Enjoy :metal:
+- Item 1
+- Item 2
+- Item 3
